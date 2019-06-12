@@ -1,0 +1,4 @@
+103/Taj Mahal:India:7.7
+219/Muralla China:China:11
+312/Alhambra:España:2.83
+403/Mahabalipuram:India:15
