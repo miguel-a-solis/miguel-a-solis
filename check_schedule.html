@@ -11,18 +11,30 @@
   gtag('config', 'UA-139563307-1');
 </script>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<meta name="description" content="Miguel A. Solis, Interim Academic at Universidad Católica del Norte (UCN), Antofagasta" />
+	<meta name="description" content="Miguel A. Solis, Head at Robotics and Automation Eng., Universidad Andrés Bello (UNAB), Santiago" />
 	<meta name="keywords" content="miguel solis, robotica, aprendizaje reforzado" />
 	<meta name="author" content="Miguel A. Solis" />
 	<link rel="stylesheet" type="text/css" href="1024px.css" title="1024px" media="screen,projection" />
-	<title>Miguel A. Solis - Interim Academic</title>
+	<title>Miguel A. Solis - Head</title>
 </head>
 
 <body>
 <script language="JavaScript" type="text/javascript">
+const cipher = salt => {
+    const textToChars = text => text.split('').map(c => c.charCodeAt(0));
+    const byteHex = n => ("0" + Number(n).toString(16)).substr(-2);
+    const applySaltToChar = code => textToChars(salt).reduce((a,b) => a ^ b, code);
+
+    return text => text.split('')
+        .map(textToChars)
+        .map(applySaltToChar)
+        .map(byteHex)
+        .join('');
+}
+const myCipher = cipher('llave')
 var pass, i;
 pass=prompt("Por favor, escribe la contraseña","");
-if (pass=="horariodemiguel") {
+if (myCipher(pass)=="1a1d0013001b1d16171f1b1507171e") {
 window.location.href="schedule.html";
 i=4;
 }
@@ -32,13 +44,18 @@ i=4;
 	<div id="header">
 		<p id="toplinks">Skip to: <a href="#content">Content</a> | <a href="#sidebar">Navigation</a> | <a href="#footer">Footer</a></p>
 		<h1><a href="index.html">Miguel A. Solis</a></h1>
-		<p id="slogan">Interim Academic</p>
+		<p id="slogan">Head at Robotics and Automation Eng.</p>
 	</div>
 
 	<div id="content">
 
 		<h2>Availability Schedule</h2>
-		<p>If you are reading this, it means you do not have permission for looking into my schedule.<br><br> In case you want to meet with me, please contact me at <a href="mailto:miguel.solis (at) innovacionyrobotica.com">miguel.solis (at) innovacionyrobotica.com</a> and I will give you the password.</p>
+<script>
+
+const myCipher = cipher('llave')
+document.write(myCipher('horariodemiguel'))
+</script>
+		<p>If you are reading this, it means you do not have permission for looking into my schedule.<br><br> In case you want to meet with me, please contact me at <a href="mailto:miguel.solis (at) unab.cl">miguel.solis (at) unab.cl</a> and I will give you the password.<br><br> <b>In case you are a <a href="http://www.unab.cl" target="_blank">UNAB</a> student, my fixed availability for you is from 15.30 to 19.30 on Tuesdays</b>.</p>
 	</div>
 
 	<div id="sidebar">
@@ -60,7 +77,7 @@ i=4;
 <script type="text/javascript" src="//widget.supercounters.com/ssl/hit.js"></script><script type="text/javascript">sc_hit(1539590,8,5);</script><br><noscript><a href="http://www.supercounters.com/">free online counter</a></noscript>
 
 <!-- END: Powered by Supercounters.com -->
-		<p>&copy; 2019 <a href="index.html">Miguel A. Solis</a> | Design by <a href="http://andreasviklund.com/">Andreas Viklund</a></p>
+		<p>&copy; 2020 <a href="index.html">Miguel A. Solis</a> | Design by <a href="http://andreasviklund.com/">Andreas Viklund</a></p>
 	</div>
 
 </div>
